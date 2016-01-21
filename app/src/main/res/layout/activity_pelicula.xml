@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="co.edu.udea.fsi.cineudea.vista.pelicula.PeliculaActivity">
+
+    <ImageView
+        android:id="@+id/ivPortadaPeli"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@+id/tvNombrePeli"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvNombrePeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvDescripcionPeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPortadaPeli"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="New Text" />
+
+    <Button
+        android:id="@+id/bReservarPeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:text="Realizar Reserva"
+        android:textColor="#ffffff" />
+
+    <Spinner
+        android:id="@+id/spinnerTipoPeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bReservarPeli"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="37dp"
+        android:layout_toLeftOf="@+id/spinnerFechaPeli"
+        android:layout_toStartOf="@+id/spinnerFechaPeli" />
+
+    <Spinner
+        android:layout_marginBottom="37dp"
+        android:id="@+id/spinnerFechaPeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvNombrePeli"
+        android:layout_alignStart="@+id/tvNombrePeli"
+        android:layout_alignTop="@+id/spinnerTipoPeli"
+        android:spinnerMode="dropdown"
+        android:layout_alignRight="@+id/bReservarPeli"
+        android:layout_alignEnd="@+id/bReservarPeli" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerTipoPeli"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Formato" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinnerTipoPeli"
+        android:layout_alignLeft="@+id/spinnerFechaPeli"
+        android:layout_alignStart="@+id/spinnerFechaPeli"
+        android:text="Fecha y Hora" />
+
+</RelativeLayout>
